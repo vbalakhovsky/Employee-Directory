@@ -1,10 +1,9 @@
 import axios from "axios";
-const QueryUrl = "https://randomuser.me/api/?inc=name,email,phone,picture,location,city";
 
-
+// Export an object containing methods we'll use for accessing the Dog.Ceo API
 
 export default {
-  search: function() {
-    return axios.get(QueryUrl);
+  getRandomUser: function() {
+    return axios.get("https://randomuser.me/api/?results=20");
   }
 };
