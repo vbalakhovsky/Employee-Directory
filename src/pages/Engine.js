@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import API from "../utils/API";
 import UserCard from "../components/Card";
 
-class Discover extends Component {
+class Engine extends Component {
   state = {
     results: null,
     order: "descending"
   };
 
-  // When the component mounts, load the next dog to be displayed
+  
   componentDidMount() {
     this.loadNextUser();
   }
@@ -17,23 +17,23 @@ class Discover extends Component {
     if (this.state.order === "ascending") {
       this.setState({...this.state, order: "descending"})
       let x = this.state.results;
-      var desSort  = x.sort(function(a, b) {
+      var zaSort  = x.sort(function(a, b) {
         var textA = a.name.first.toUpperCase();
         var textB = b.name.first.toUpperCase();
         return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
     })
-      this.setState({results: desSort})
+      this.setState({results: zaSort})
     } else if (this.state.order === "descending") {
       this.setState({...this.state, order: "ascending"})
       let x = this.state.results;
-      var ascSort  = x.sort(function(a, b) {
+      var azSort  = x.sort(function(a, b) {
         var textA = a.name.first.toUpperCase();
         var textB = b.name.first.toUpperCase();
         return (textA < textB) ? 1 : (textA > textB) ? -1 : 0;
     });
-      console.log(ascSort);
-      this.setState({results: ascSort})
-    } else {console.log("Error with state")}
+      console.log(azSort);
+      this.setState({results: azSort})
+    } else {console.log("Error")}
   };
 
   loadNextUser = () => {
@@ -62,7 +62,7 @@ class Discover extends Component {
           <div className ="col-md-2">
 
           </div>
-      <div className="col-md-2">
+      <div className="col-md-10">
         <table>
           <th>
             <button className="btn-danger" onClick={this.handleBtnClick}>Sort by Name - {this.state.order}</button>
@@ -73,10 +73,11 @@ class Discover extends Component {
     <div className="row"> 
           {this.state.results.map(user => (
       <UserCard
-        name={user.name.title + " " +  user.name.first + " " + user.name.last}
+        name={user.name.first + " " + user.name.last}
         key={user.id}
-        image={user.picture.large}
+        image={user.picture.medium}
         email={user.email}
+        city={user.location.city}
         phone={user.phone}
         handleBtnClick={this.handleBtnClick}
       />
@@ -89,4 +90,4 @@ class Discover extends Component {
   }
 
 
-export default Discover;
+export default Engine;

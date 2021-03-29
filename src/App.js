@@ -1,5 +1,5 @@
 import React from "react";
-import Discover from "./pages/Discover";
+import Engine from "./pages/Engine";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
@@ -11,7 +11,7 @@ function App() {
       <div>
         <Navbar />
         <Wrapper>
-          <Discover />
+          <Engine />
         </Wrapper>
         <Footer />
       </div>

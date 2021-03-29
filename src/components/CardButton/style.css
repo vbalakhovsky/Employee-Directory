@@ -1,7 +1,7 @@
 .card-btn {
     border-radius: 50%;
     height: 50px;
-    width: 50px;
+    width: 200px;
     position: absolute;
     border: none;
     bottom: 10%;
@@ -14,7 +14,7 @@
   
   .pass {
     left: 1%;
-    background: #E53935;
+    background: #2a2f7e;
   }
   
   .pass::after {

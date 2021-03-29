@@ -20,6 +20,9 @@ function UserCard(props) {
           </li>
           <li>
             <strong>Phone:</strong> {props.phone}
+            </li>
+          <li>
+            <strong>Location:</strong> {props.city}
           </li>
         </ul>
       </div>
