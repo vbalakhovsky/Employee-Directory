@@ -1,3 +1,8 @@
+This is a react app that allows user to see a list of employees. Random user API  https://randomuser.me/api was used to create the list of employees. The App uses Bootstrap. The user has the option to sort the list alphabetically.
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

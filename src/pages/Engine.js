@@ -80,7 +80,9 @@ class Engine extends Component {
         city={user.location.city}
         phone={user.phone}
         handleBtnClick={this.handleBtnClick}
+        
       />
+      
   ))}
   </div>
   </div>
@@ -91,3 +93,14 @@ class Engine extends Component {
 
 
 export default Engine;
+
+
+// const deleteUser = async (id) => {
+//   const res = await fetch(`http://localhost:5000/tasks/${id}`, {
+//     method: 'DELETE',
+//   })
+//   //We should control the response status to decide if we will change the state or not.
+//   res.status === 200
+//     ? setTasks(tasks.filter((task) => task.id !== id))
+//     : alert('Error Deleting This Task')
+// }

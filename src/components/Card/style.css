@@ -14,14 +14,16 @@
     overflow: hidden;
     text-align: center;
     background:rgb(255, 255, 255);
+    padding: 1 rem;
   }
   .card > .img-container > img {
     width: 60%
+    
   }
   
   .card > .content {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     font-size: 15px;
   }
   
@@ -34,5 +36,5 @@
   }
   
   .card:hover {
-    background-color: #82d4f5;
+    background-color: #d5e1e6;
   }

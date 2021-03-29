@@ -5,7 +5,7 @@ import "./style.css";
 function UserCard(props) {
   console.log(props.name);
   return (
-    <div className="col-md-3">
+    <div className="col-md-9">
     <div className="card">
       <div className="img">
         <img alt={props.name} src={props.image} className="rounded"/>
